@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower Defense</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <!-- Canvas do jogo -->
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+        <div id="livesDisplay">Vidas: 10</div>
+
+        <!-- Exibição de Moedas -->
+        <div id="moneyDisplay">Moedas: 400</div>
+    </div>
+
+    <button id="mobileShopButton" class="hidden">🛒</button>
+
+    <div id="towershop" class="shop">
+
+        <!-- Loja de Torres (fora do canvas) -->
+        <div id="towerShop" class="shop-section">
+            <button class="tower" data-type="blue" data-price="50">Torre Azul (50 moedas)</button>
+            <button class="tower" data-type="orange" data-price="125">Torre Laranja (125 moedas)</button>
+            <button class="tower" data-type="sniper" data-price="75">Torre Verde (75 moedas)</button>
+            <button class="tower" data-type="area" data-price="400">Torre Azul Escuro (400 moedas)</button>
+            <button class="tower" data-type="machinegun" data-price="150" style="background-color: darkred;">Torre Metralhadora (150 Moedas)</button>
+        
+        </div>
+
+        <!-- Loja de Power-Ups (na parte inferior) -->
+            <div id="powerUpShop" class="shop-section">
+                <button id="freezeButton" class="powerup">Comprar PowerUp Congelante (150 moedas)</button>
+                <button id="poisonButton" class="powerup">Comprar PowerUp Envenenamento (330 moedas)</button>
+                <button id="hypnoButton" class="powerup">Comprar PowerUp Hipnose (200 moedas)</button>
+            </div>
+        
+
+    </div>
+    
+    <!-- Exibe o tempo de recarga dos PowerUps -->
+    <div id="powerUpDisplay"></div>
+    <div id="poisonPowerUpDisplay"></div>
+    <div id="hypnoPowerUpDisplay"></div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
